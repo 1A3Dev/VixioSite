@@ -46,8 +46,7 @@
         <label class="label">Example:</label>
         <pre class="card-example">
             {@html
-                syntax.example
-                    .split(',')
+                syntax.examples
                     .join('<br>')
                     .split('\\t')
                     .join('&nbsp;')

@@ -1,21 +1,19 @@
 name: Build and deploy website
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-      
-      - uses: actions/checkout@v1
-          
+      - uses: actions/checkout@v2
+
       - name: Setup NodeJS environement
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: '10.x'
 
@@ -24,18 +22,15 @@ jobs:
 
       - name: Build Website
         run: yarn build
-      
+
       - name: Deploy to GitHub Pages
         run: |
           cd public
           git init
-          git config --global user.email "${EMAIL}"
-          git config --global user.name "Olyno"
-          git remote add origin https://${ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git remote add origin https://${GITHUB_REPOSITORY_OWNER}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git
           git checkout -b gh-pages
           git add .
           git commit -m "Build website"
           git push origin gh-pages -f
-        env:
-          EMAIL: ${{ secrets.EMAIL }}
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}

@@ -43,9 +43,9 @@
                 </a>
 
                 <div class="navbar-dropdown">
-                    <a class="navbar-item" target="_blank" href="https://github.com/iBlitzkriegi/Vixio/issues/new?template=bug_report.md">Report issue</a>
-                    <a class="navbar-item" target="_blank" href="https://github.com/iBlitzkriegi/Vixio/issues/new?template=feature_request.md">Report suggestion / idea</a>
-                    <a class="navbar-item" target="_blank" href="https://github.com/iBlitzkriegi/Vixio/releases">Download Vixio</a>
+                    <a class="navbar-item" target="_blank" href="https://github.com/1A3Dev/Vixio/issues/new?template=bug_report.md">Report issue</a>
+                    <a class="navbar-item" target="_blank" href="https://github.com/1A3Dev/Vixio/issues/new?template=feature_request.md">Report suggestion / idea</a>
+                    <a class="navbar-item" target="_blank" href="https://github.com/1A3Dev/Vixio/releases">Download Vixio</a>
                 </div>
             </div>
 

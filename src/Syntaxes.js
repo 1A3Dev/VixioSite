@@ -103,7 +103,7 @@ export default {
 			"description": "Fired when a message is sent in a text channel that the bot can read.",
 			"name": "Guild Message Received",
 			"patterns": [
-				"(guild|server) message (1�receive[d] [seen]|2� sent) [by %-string%]"
+				"(guild|server) message (receive[d] [seen]|sent) [by %-string%]"
 			],
 			"eventvalues": [
 				"event-guildchannel",
@@ -1075,7 +1075,7 @@ export default {
 		"description": "Allow, or deny a role or a member permissions to a channel",
 		"name": "Member Permission in GuildChannel",
 			"patterns": [
-				"(allow|1�deny) %roles/members% [the] permission[s] %permissions% [in %channels%] [with %bot/string%]"
+				"(allow|deny) %roles/members% [the] permission[s] %permissions% [in %channels%] [with %bot/string%]"
 			],
 			"examples": [
 				"discord command grant <text> <permission>:",
@@ -1215,7 +1215,7 @@ export default {
 		"description": "Allow, or deny a role or a member permissions to a command",
 		"name": "Command Permission in Guild",
 			"patterns": [
-				"(allow|1�deny|2�reset) %roles/users/members% access to %string% in %guild% [with %bot/string%]"
+				"(allow|deny|reset) %roles/users/members% access to %string% in %guild% [with %bot/string%]"
 			],
 			"examples": [
 				"discord command grant <text> <string>:",
@@ -1231,7 +1231,7 @@ export default {
 		"description": "Defer an interaction.",
 		"name": "Defer Interaction",
 			"patterns": [
-				"defer [the] interaction [event] (1�silently|2�normally)"
+				"defer [the] interaction [event] (silently|normally)"
 			],
 			"examples": [
 				"on slash command received:",
@@ -1242,7 +1242,7 @@ export default {
 		"description": "Send a follow up response to an interaction.",
 		"name": "Interaction Follow Up Response",
 			"patterns": [
-				"say interaction message (1�silently|2�normally) (and say|with) %messages/strings%"
+				"say interaction message (silently|normally) (and say|with) %messages/strings%"
 			],
 			"examples": [
 				"on slash command received:",
@@ -1253,7 +1253,7 @@ export default {
 		"description": "Respond to an interaction.",
 		"name": "Respond to Interaction",
 			"patterns": [
-				"respond to [the] interaction [event] (1�silently|2�normally) (and say|with) %messages/strings%"
+				"respond to [the] interaction [event] (silently|normally) (and say|with) %messages/strings%"
 			],
 			"examples": [
 				"on slash command received:",

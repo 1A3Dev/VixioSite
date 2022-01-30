@@ -12,6 +12,19 @@
 	.search-input::placeholder {
 		color: grey;
 	}
+
+	:global(::-webkit-scrollbar) {
+		width: 10px;
+	}
+
+	:global(::-webkit-scrollbar-thumb) {
+		border-radius: 20px;
+		background-color: rgb(59, 59, 59);
+	}
+
+	:global(::-webkit-scrollbar-track) {
+		background-color: rgb(30, 30, 30);
+	}
 </style>
 
 <script>

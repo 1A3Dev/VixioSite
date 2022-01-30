@@ -1,3 +1,19 @@
+<style>
+	:global(body) {
+		background-color: #0d1117;
+	}
+	.title {
+		color: white !important;
+	}
+	.search-input {
+		background-color: transparent;
+		color: white;
+	}
+	.search-input::placeholder {
+		color: grey;
+	}
+</style>
+
 <script>
 
 	import { onMount } from 'svelte';

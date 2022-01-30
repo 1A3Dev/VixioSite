@@ -1,3 +1,9 @@
+<style>
+	.menu-list a {
+		color: white;
+	}
+</style>
+
 <aside class="menu">
     <p class="menu-label">Search in</p>
     <ul class="menu-list">

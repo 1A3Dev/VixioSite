@@ -1,3 +1,12 @@
+<style>
+	.navbar-menu {
+		background-color: #161b22;
+	}
+    .navbar-item, .navbar-link {
+        color: white;
+    }
+</style>
+
 <script>
     let active = false;
 </script>

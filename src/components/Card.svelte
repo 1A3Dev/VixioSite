@@ -1,3 +1,12 @@
+<style>
+	.card {
+		background-color: #161b22;
+	}
+    .card-header-title, .label, .content {
+        color: white;
+    }
+</style>
+
 <script>
 
     export let type;

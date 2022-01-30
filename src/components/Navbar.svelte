@@ -1,9 +1,18 @@
 <style>
-	.navbar-menu {
+	.navbar-menu, .navbar-brand, .navbar-dropdown {
 		background-color: #161b22;
 	}
-    .navbar-item, .navbar-link {
-        color: white;
+    .navbar-item, .navbar-link, .navbar-burger {
+        color: white !important;
+    }
+    .navbar-link.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover {
+        background-color: #0d1117;
+    }
+    .navbar-dropdown {
+        border-top: unset;
+    }
+    .is-hoverable > a:hover {
+        background-color: #0d1117 !important;
     }
 </style>
 

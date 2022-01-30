@@ -2,6 +2,9 @@
 	.menu-list a {
 		color: white;
 	}
+    .menu-list a:hover {
+        background-color: #161b22 !important;
+    }
 </style>
 
 <aside class="menu">

@@ -39,7 +39,6 @@
 <body class="dark-mode">
 </body>
 <script>
-	if(window.localStorage.getItem('theme') == 'light') toggleTheme();
 	function toggleTheme() {
 		if(document.body.classList.value == 'dark-mode') {
 			document.body.classList.remove('dark-mode');
@@ -49,5 +48,6 @@
 			window.localStorage.setItem('theme', 'dark');
 		}
 	}
+	if(window.localStorage.getItem('theme') == 'light') toggleTheme();
 </script>
 </html>

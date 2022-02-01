@@ -1,9 +1,9 @@
 <style>
-	.footer {
+	:global(body.dark-mode) .footer {
 		background-color: #161b22;
         padding: 2rem 1.5rem 2rem;
 	}
-    .content {
+    :global(body.dark-mode) .content {
         color: white;
     }
 </style>

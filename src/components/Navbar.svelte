@@ -1,25 +1,18 @@
 <style>
-	.navbar-menu, .navbar-brand, .navbar-dropdown {
+	:global(body.dark-mode) .navbar-menu, :global(body.dark-mode) .navbar-brand, :global(body.dark-mode) .navbar-dropdown {
 		background-color: #161b22;
 	}
-    .navbar-item, .navbar-link, .navbar-burger {
+    :global(body.dark-mode) .navbar-item, :global(body.dark-mode) .navbar-link, :global(body.dark-mode) .navbar-burger {
         color: white !important;
     }
-    .navbar-link.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover {
+    :global(body.dark-mode) .navbar-link.is-active, :global(body.dark-mode) .navbar-link:focus, :global(body.dark-mode) .navbar-link:focus-within, :global(body.dark-mode) .navbar-link:hover, :global(body.dark-mode) a.navbar-item.is-active, :global(body.dark-mode) a.navbar-item:focus, :global(body.dark-mode) a.navbar-item:focus-within, :global(body.dark-mode) a.navbar-item:hover {
         background-color: #0d1117;
     }
-    .navbar-dropdown {
+    :global(body.dark-mode) .navbar-dropdown {
         border-top: unset;
     }
-    .is-hoverable > a:hover {
+    :global(body.dark-mode) .is-hoverable > a:hover {
         background-color: #0d1117 !important;
-    }
-
-    .navbar-start {
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        gap: 1em;
     }
 </style>
 
@@ -37,6 +30,10 @@
     </div>
     <div class="navbar-menu" class:is-active={active}>
         <div class="navbar-start">
+            <a class="navbar-item" onclick="toggleTheme();">
+                <span><i class="fas fa-moon"></i></span>
+            </a>
+            
             <a class="navbar-item" target="_blank" href="https://github.com/1A3Dev/Vixio/releases">
                 <span><i class="fab fa-github"></i></span> 
                 <span style="margin-left: 5px;">Releases</span>

@@ -1,12 +1,14 @@
 <style>
-	:global(body) {
+	:global(body.dark-mode) {
 		background-color: #0d1117;
 	}
-	.title {
+	:global(body.dark-mode) .title {
 		color: white !important;
 	}
 	.search-input {
 		background-color: transparent;
+	}
+	:global(body.dark-mode).search-input {
 		color: white;
 	}
 	.search-input::placeholder {

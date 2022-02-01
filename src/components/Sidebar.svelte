@@ -1,8 +1,8 @@
 <style>
-	.menu-list a {
+	:global(body.dark-mode) .menu-list a {
 		color: white;
 	}
-    .menu-list a:hover {
+    :global(body.dark-mode) .menu-list a:hover {
         background-color: #161b22 !important;
     }
 </style>

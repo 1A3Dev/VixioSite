@@ -1,8 +1,8 @@
 <style>
-	.card {
+	:global(body.dark-mode) .card {
 		background-color: #161b22;
 	}
-    .card-header-title, .label, .content {
+    :global(body.dark-mode) .card-header-title, :global(body.dark-mode) .label, :global(body.dark-mode) .content {
         color: white;
     }
 </style>

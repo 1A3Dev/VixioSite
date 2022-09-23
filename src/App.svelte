@@ -40,18 +40,13 @@
 	import TopArrow from './components/TopArrow.svelte';
 	import Footer from './components/Footer.svelte';
 
-	let effects = [];
-	let conditions = [];
-	let expressions = [];
-	let events = [];
-
 	async function search() {
 		const cards = document.getElementsByClassName('syntaxes')[0].getElementsByClassName('card')
 		const search_value = document.getElementsByClassName('search-input')[0].value.toLowerCase();
 		for (let i = 0; i < cards.length; i++) {
 			const title = cards[i].getElementsByClassName('card-header-title')[0].textContent;
-			const pattern = cards[i].getElementsByClassName('card-pattern')[0];
-			if (title.toLowerCase().indexOf(search_value) > -1) {
+			const pattern = cards[i].getElementsByClassName('card-pattern')[0].textContent;
+			if (title.toLowerCase().includes(search_value) || pattern.toLowerCase().includes(search_value)) {
 				cards[i].style.display = '';
 			} else {
 				cards[i].style.display = 'none';
@@ -80,7 +75,7 @@
 		</div>
 		<div class="column is-10">
 			<div class="has-text-centered">
-				<input class="input has-text-centered search-input" on:keypress={search} type="text" placeholder="Find a syntax">
+				<input class="input has-text-centered search-input" on:input={search} type="text" placeholder="Find a syntax">
 				<br><br>
 			</div>
 			<div class="syntaxes top">

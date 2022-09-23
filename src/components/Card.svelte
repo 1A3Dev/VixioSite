@@ -43,7 +43,7 @@
 
             <label class="label">Patterns:</label>
             <pre class="card-pattern">
-                {@html 
+                {@html
                     syntax.patterns
                         .join('<br>')
                         .replace(/\b(seen|from|of|in|reply with|append|set|add|remove)\b/gmui, '<span style="color: rgb(69, 134, 239)">$&</span>')
@@ -69,7 +69,7 @@
             {#if syntax.eventvalues && syntax.eventvalues.length > 0}
                 <label class="label">Event Values:</label>
                 <pre class="card-pattern">
-                    {@html 
+                    {@html
                         syntax.eventvalues.join('<br>')
                     }
                 </pre>

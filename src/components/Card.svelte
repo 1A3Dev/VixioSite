@@ -38,10 +38,10 @@
     </header>
     <div class="card-content">
         <div class="content">
-            <label class="label">Description:</label>
+            <label class="label" for="card_desc">Description:</label>
             <div class="content">{syntax.description}</div>
 
-            <label class="label">Patterns:</label>
+            <label class="label" for="card_patterns">Patterns:</label>
             <pre class="card-pattern">
                 {@html
                     syntax.patterns
@@ -51,7 +51,7 @@
                 }
             </pre>
 
-            <label class="label">Example:</label>
+            <label class="label" for="card_examples">Example:</label>
             <pre class="card-example">
                 {@html
                     syntax.examples
@@ -67,7 +67,7 @@
             </pre>
 
             {#if syntax.eventvalues && syntax.eventvalues.length > 0}
-                <label class="label">Event Values:</label>
+                <label class="label" for="card_values">Event Values:</label>
                 <pre class="card-pattern">
                     {@html
                         syntax.eventvalues.join('<br>')

@@ -1,18 +1,12 @@
 <style>
-	:global(body.dark-mode) .navbar-menu, :global(body.dark-mode) .navbar-brand, :global(body.dark-mode) .navbar-dropdown {
+	:global(body.dark-mode) .navbar-menu, :global(body.dark-mode) .navbar-brand {
 		background-color: #161b22;
 	}
-    :global(body.dark-mode) .navbar-item, :global(body.dark-mode) .navbar-link, :global(body.dark-mode) .navbar-burger {
+    :global(body.dark-mode) .navbar-item, :global(body.dark-mode) .navbar-burger {
         color: white !important;
     }
-    :global(body.dark-mode) .navbar-link.is-active, :global(body.dark-mode) .navbar-link:focus, :global(body.dark-mode) .navbar-link:focus-within, :global(body.dark-mode) .navbar-link:hover, :global(body.dark-mode) a.navbar-item.is-active, :global(body.dark-mode) a.navbar-item:focus, :global(body.dark-mode) a.navbar-item:focus-within, :global(body.dark-mode) a.navbar-item:hover {
+    :global(body.dark-mode) a.navbar-item:focus, :global(body.dark-mode) a.navbar-item:focus-within, :global(body.dark-mode) a.navbar-item:hover {
         background-color: #0d1117;
-    }
-    :global(body.dark-mode) .navbar-dropdown {
-        border-top: unset;
-    }
-    :global(body.dark-mode) .is-hoverable > a:hover {
-        background-color: #0d1117 !important;
     }
 </style>
 

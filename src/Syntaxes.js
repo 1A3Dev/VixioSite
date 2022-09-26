@@ -1990,11 +1990,11 @@ export default {
 		"description": "Get the Embed of a Message",
 		"name": "Embed of Message",
 			"patterns": [
-				"[the] embed[s] of %messages%",
-				"%messages%'[s] embed[s]"
+				"[the] embeds[s] of %messages%",
+				"%messages%'[s] embeds[s]"
 			],
 			"examples": [
-				"broadcast \"%embed of event-message%\""
+				"broadcast \"%embeds of event-message%\""
 			]
 		},
 		{
@@ -2660,7 +2660,7 @@ export default {
 			]
 		},
 		{
-		"description": "Get the content of a Message. The content can be set and deleted.",
+		"description": "Get the content of a slash command option.",
 		"name": "Slash Command Option",
 			"patterns": [
 				"[the] [slash] [command] option [with id] %string%"

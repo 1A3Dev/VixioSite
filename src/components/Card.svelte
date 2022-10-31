@@ -42,37 +42,29 @@
             <div class="content">{syntax.description}</div>
 
             <label class="label" for="card_patterns">Patterns:</label>
-            <pre class="card-pattern">
-                {@html
-                    syntax.patterns
-                        .join('<br>')
-                        .replace(/\b(seen|from|of|in|reply with|append|set|add|remove)\b/gmui, '<span style="color: rgb(69, 134, 239)">$&</span>')
-                        .replace(/\b(bot|guild|user|member|role|channel|permission|emote|embed)(builder)?s?\b/gmui, '<span style="color: rgb(61, 226, 75)">$&</span>')
-                }
-            </pre>
+            <pre class="card-pattern">{@html
+syntax.patterns
+    .join('<br>')
+    .replace(/\b(seen|from|of|in|reply with|append|set|add|remove)\b/gmui, '<span style="color: rgb(69, 134, 239)">$&</span>')
+    .replace(/\b(bot|guild|user|member|role|channel|permission|emote|embed)(builder)?s?\b/gmui, '<span style="color: rgb(61, 226, 75)">$&</span>')
+}</pre>
 
             <label class="label" for="card_examples">Example:</label>
-            <pre class="card-example">
-                {@html
-                    syntax.examples
-                        .join('<br>')
-                        .split('\\t')
-                        .join('&nbsp;')
-                        .replace(/\t(prefixes|aliases|roles|description|usage|bots|executable in|trigger):/gmui, '<span style="color: rgb(244, 182, 66)">$&</span>')
-                        .replace(/\s".+"/gmui, '<span style="color: rgb(194, 66, 244)">$&</span>')
-                        .replace(/(discord )?command/gmui, '<span style="color: rgb(244, 182, 66)">$&</span>')
-                        .replace(/\{@.+\}/gmui, '<span style="color: rgb(224, 38, 38)">$&</span>')
-                        .replace(/\b(seen|from|in|reply with|append|set|add|remove|if|is|make)(?!:)\b/gmui, '<span style="color: rgb(69, 134, 239)">$&</span>')
-                }
-            </pre>
+            <pre class="card-example">{@html
+syntax.examples
+    .join('<br>')
+    .split('\\t')
+    .join('&nbsp;')
+    .replace(/\t(prefixes|aliases|roles|description|usage|bots|executable in|trigger):/gmui, '<span style="color: rgb(244, 182, 66)">$&</span>')
+    .replace(/\s".+"/gmui, '<span style="color: rgb(194, 66, 244)">$&</span>')
+    .replace(/(discord )?command/gmui, '<span style="color: rgb(244, 182, 66)">$&</span>')
+    .replace(/\{@.+\}/gmui, '<span style="color: rgb(224, 38, 38)">$&</span>')
+    .replace(/\b(seen|from|in|reply with|append|set|add|remove|if|is|make)(?!:)\b/gmui, '<span style="color: rgb(69, 134, 239)">$&</span>')
+}</pre>
 
             {#if syntax.eventvalues && syntax.eventvalues.length > 0}
                 <label class="label" for="card_values">Event Values:</label>
-                <pre class="card-pattern">
-                    {@html
-                        syntax.eventvalues.join('<br>')
-                    }
-                </pre>
+                <pre class="card-pattern">{@html syntax.eventvalues.join('<br>') }</pre>
             {/if}
         </div>
     </div>

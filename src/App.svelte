@@ -1,5 +1,5 @@
 <style>
-	:global(body.dark-mode) {
+	:global(html.dark-mode) {
 		background-color: #0d1117;
 	}
 	:global(body.dark-mode) .title {
@@ -8,7 +8,7 @@
 	.search-input {
 		background-color: transparent;
 	}
-	:global(body.dark-mode).search-input {
+	:global(body.dark-mode) .search-input {
 		color: white;
 	}
 	.search-input::placeholder {

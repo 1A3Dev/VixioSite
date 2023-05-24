@@ -55,10 +55,18 @@
 	}
 
 	onMount(async () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get("query")) {
+            document.getElementsByClassName('search-input')[0].value = urlParams.get("query");
+            search();
+        }
+
 		const match = window.location.href.match(/(\#.+)$/gm);
 		if (match) {
 			let element = document.getElementById( match[0].replace(/^\#/gm, '') );
-			await element.scrollIntoView();
+            setTimeout(async() => {
+			    element.scrollIntoView();
+            }, 1000)
 		}
 	})
 

@@ -24,7 +24,7 @@
     </div>
     <div class="navbar-menu" class:is-active={active}>
         <div class="navbar-start">
-            <a class="navbar-item" href="#!" onclick="toggleTheme();">
+            <a class="navbar-item" href="#!" on:click={() => toggleTheme()}>
                 <span><i class="fas fa-moon"></i></span>
             </a>
 
